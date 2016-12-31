@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="/lib/jquery/dist/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- 引入 vuejs 核心 JavaScript 文件 -->
+	<script src="/lib/vue/dist/vue.min.js"></script>
+  </head>
+  <body>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#"><%= title %></a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="#">{{title}}</a>
+						</li>
+						<li>
+							 <a href="#">链接1</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">动作1</a>
+								</li>
+								<li>
+									 <a href="#">动作2</a>
+								</li>
+								<li>
+									 <a href="#">动作3</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">分隔动作1</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">分隔动作2</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" />
+						</div> <button type="submit" class="btn btn-default">搜索</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							 <a href="#">链接2</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单2<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">动作1</a>
+								</li>
+								<li>
+									 <a href="#">动作2</a>
+								</li>
+								<li>
+									 <a href="#">其他动作</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">其他动作2</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<div class="jumbotron">
+				<h1>
+					Hello, world!
+				</h1>
+				<p>
+					<%= msg%>
+				</p>
+				<p>
+					 <a class="btn btn-primary btn-large" href="#">更多</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<h2>
+				标题1
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">详细信息  »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				标题2
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">详细信息  »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				标题3
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">详细信息 »</a>
+			</p>
+		</div>
+	</div>
+	</div>
+	 <script language="JavaScript">
+		var vue = new Vue({
+			el: '#bs-example-navbar-collapse-1',
+			data: {
+				title: '首页vuejs'
+			}
+		});
+	 </script>
+  </body>
+</html>
