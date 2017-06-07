@@ -14,8 +14,8 @@
 
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- 引入 vuejs 核心 JavaScript 文件 -->
-	<script src="/lib/vue/dist/vue.min.js"></script>
+    <!-- 引入 jsviews 核心 JavaScript 文件 -->
+    <script src="/lib/jsviews/jsviews.min.js"></script>
   </head>
   <body>
 	<div class="container">
@@ -28,8 +28,8 @@
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							 <a href="#">{{title}}</a>
+                       	<li class="active" id="title">
+
 						</li>
 						<li>
 							 <a href="#">链接1</a>
@@ -140,13 +140,18 @@
 		</div>
 	</div>
 	</div>
+    <script id="titleTml" type="text/x-jsrender">
+         <a href="#">{{:title}}</a>
+	 </script>
 	 <script language="JavaScript">
-		var vue = new Vue({
-			el: '#bs-example-navbar-collapse-1',
-			data: {
-				title: '首页vuejs'
-			}
-		});
+
+         $(function () {
+             var titleData={title:"首页jsviews"};
+             $.templates({
+                 titleTml: "#titleTml"
+             });
+             $.templates.titleTml.link("#title",titleData);
+         });
 	 </script>
   </body>
 </html>
